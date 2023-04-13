@@ -5,7 +5,7 @@
   tasks:
       - name: Testing the source code and move the code to Docker node
         synchronize:
-          src: /var/lib/jenkins/workspace/Devops-project/
+          src: /var/lib/jenkins/workspace/insightIQ/
           dest: /home/jenkins/Devops-project/
           delete: yes
           
