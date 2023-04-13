@@ -1,0 +1,34 @@
+---
+- hosts: all
+  become: false
+
+  tasks:
+      - name: Stop running container
+        command: sudo docker stop devops_project
+        ignore_errors: yes
+
+      - name: Remove running container
+        command: sudo docker rm  devops_project
+        ignore_errors: yes
+
+
+
+      - name: Build new image
+        command: sh /home/jenkins/Devops-project/run_container.sh
+      
+      - name: Run the new Container
+        command: sudo docker run -d --name devops_project -p 8080:8080 1365890/devops_projects 
+        #command : sudo docker compose up
+
+      - name: Remove all older images
+        command: sudo docker image prune -f
+       
+
+
+     
+
+      
+
+     
+      
+
