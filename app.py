@@ -32,11 +32,11 @@ app=Flask(__name__)
 
 def QR():
 
-    put_html(r"""<h1  align="center"><strong> CODE GENERATOR : Test</strong></h1>""")  # App Name in Main screen
+    put_html(r"""<h1  align="center"><strong> CODE GENERATOR : Push event</strong></h1>""")  # App Name in Main screen
     # Drop-down selection
 
 
-    gift = select('Choose a Service to get started!*', ['QR Code', 'Barcode'])
+    gift = select('Choose a Service to get started!', ['QR Code', 'Barcode'])
 
     if gift == 'QR Code':
 
