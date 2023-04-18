@@ -4,9 +4,7 @@
 
   tasks:
 
-      - name: Build new image
-        command: sh /home/jenkins/Devops-project/run_container.sh
-      
+          
       - name: Stop running Service
         command: sudo docker service rm insightiq
         ignore_errors: yes
@@ -17,9 +15,7 @@
         command: sudo docker service create --replicas 2 -p 80:8083 --name insightiq 1365890/devops_projects
 
 
-      
-      - name: push new image
-        command: sh docker push 1365890/devops_projects
+
 
       - name: Remove all older images
         command: sudo docker image prune -f
