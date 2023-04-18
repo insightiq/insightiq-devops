@@ -16,9 +16,8 @@
       - name: Build new image
         command: sh /home/jenkins/Devops-project/run_container.sh
       
-      - name: Run the new Container
-        
-        sudo docker service create --replicas 3 -p 80:8083 --name insightiq 1365890/devops_project
+      - name: Run the new Container        
+        command: sudo docker service create --replicas 3 -p 80:8083 --name insightiq 1365890/devops_project
 
 
      
