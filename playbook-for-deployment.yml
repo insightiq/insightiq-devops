@@ -4,12 +4,12 @@
 
   tasks:
       - name: Stop running container
-        command: sudo docker stop devops_project
+        command: sudo docker service rm insightiq
         ignore_errors: yes
 
-      - name: Remove running container
-        command: sudo docker rm  devops_project
-        ignore_errors: yes
+#       - name: Remove running container
+#         command: sudo docker rm  devops_project
+#         ignore_errors: yes
 
 
 
