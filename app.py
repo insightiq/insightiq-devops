@@ -40,7 +40,7 @@ def QR():
 
     if gift == 'QR Code':
 
-        put_html(r"""<h2  align="center"><strong>QRCode Generator</strong></h2>""")  # App Name in Main screen
+        put_html(r"""<h2  align="center"><strong>QRCode Generator-V1</strong></h2>""")  # App Name in Main screen
         img = open('logo.png', 'rb').read()  # logo
         put_image(img, width='100px')  # size of image
         foreground = ['Black', 'Red', 'Blue', 'White', 'Yellow', 'Cyan', 'Magenta']
