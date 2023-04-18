@@ -16,6 +16,11 @@
       - name: Run the new service        
         command: sudo docker service create --replicas 2 -p 80:8083 --name insightiq 1365890/devops_projects
 
+
+      
+      - name: push new image
+        command: sh docker push 1365890/devops_projects
+
       - name: Remove all older images
         command: sudo docker image prune -f
 
