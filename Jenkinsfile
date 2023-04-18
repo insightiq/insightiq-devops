@@ -14,11 +14,11 @@ pipeline {
 
         stage('Building and push new image to Docker hub') {
             steps {
-                sh 'docker push 1365890/devops_projects'
+                sh 'ansible-playbook ansible-playbook-to-push.yml --user=jenkins'
             }
         }
 
-        stage('Deploying tnew Service in Docker Swarm') {
+        stage('Deploying new Service in Docker Swarm') {
             steps {
                 sh 'ansible-playbook playbook-for-deployment.yml --user=jenkins'
             }
