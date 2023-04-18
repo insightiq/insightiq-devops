@@ -36,7 +36,7 @@ def QR():
     # Drop-down selection
 
 
-    gift = select('Choose a Service to get started!', ['QR Code', 'Barcode'])
+    gift = select('Choose a Service to get started!*', ['QR Code', 'Barcode'])
 
     if gift == 'QR Code':
 
