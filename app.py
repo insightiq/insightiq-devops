@@ -122,6 +122,15 @@ def QR():
 
            put_info("Thank you for your feedback!")
 
+        # To show About section
+        def clicked():
+            popup('About Us', [
+                put_html('<h2>Created by Team InsightIQ/h2>'),
+                put_html('<h3>This app is created using Python,</h3>'),
+                'Find More @ InsightIQ',  # equal to put_text('plain html: <br/>')
+                put_buttons(['close'], onclick=lambda _: close_popup())
+            ])
+
         def btn_click(btn_val):  # To do function of the 3 buttons
 
             if btn_val == 'About':  # btn_val contain the text of button
@@ -130,6 +139,7 @@ def QR():
                 run_js('window.location.reload()')
             elif btn_val == 'Like':
                 liked()
+        
 
         put_buttons(['Generate new Code', 'About', 'Like'], onclick=btn_click)  # Buttons
 
