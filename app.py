@@ -32,7 +32,7 @@ app=Flask(__name__)
 
 def QR():
 
-    put_html(r"""<h1  align="center"><strong> CODE GENERATOR : updated</strong></h1>""")  # App Name in Main screen
+    put_html(r"""<h1  align="center"><strong> CODE GENERATOR:v1</strong></h1>""")  # App Name in Main screen
     # Drop-down selection
 
 
@@ -40,7 +40,7 @@ def QR():
 
     if gift == 'QR Code':
 
-        put_html(r"""<h2  align="center"><strong>QRCode Generator-V1</strong></h2>""")  # App Name in Main screen
+        put_html(r"""<h2  align="center"><strong>QRCode Generator</strong></h2>""")  # App Name in Main screen
         img = open('logo.png', 'rb').read()  # logo
         put_image(img, width='100px')  # size of image
         foreground = ['Black', 'Red', 'Blue', 'White', 'Yellow', 'Cyan', 'Magenta']
@@ -125,8 +125,8 @@ def QR():
         # To show About section
         def clicked():
             popup('About Us', [
-                put_html('<h2>Created by Team InsightIQ/h2>'),
-                put_html('<h3>This app is created using Python,</h3>'),
+                put_html('<h2>Created by Team InsightIQ</h2>'),
+                put_html('<h3>This project is created using Python,Azure,Jenkins,Terraform,Ansible,Nagios,Datadog</h3>'),
                 'Find More @ InsightIQ',  # equal to put_text('plain html: <br/>')
                 put_buttons(['close'], onclick=lambda _: close_popup())
             ])
@@ -198,8 +198,8 @@ def QR():
         # To show About sessiono
         def clicked():
             popup('About Us', [
-                put_html('<h2>Created by Team InsightIQ/h2>'),
-                put_html('<h3>This app is created using Python,</h3>'),
+                put_html('<h2>Created by Team InsightIQ</h2>'),
+                put_html('<h3>This project is created using Python,Azure,Jenkins,Terraform,Ansible,Nagios,Datadog</h3>'),
                 'Find More @ InsightIQ',  # equal to put_text('plain html: <br/>')
                 put_buttons(['close'], onclick=lambda _: close_popup())
             ])
