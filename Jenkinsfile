@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Repository') {
+        stage('Clone GITHUB Repository') {
             steps {
                 checkout scm
             }
@@ -12,7 +12,7 @@ pipeline {
             }
         }
 
-        stage('Push the new Image to Dockerhub') {
+        stage('Build & Push the new Image to Dockerhub') {
             steps {
                 sh 'ansible-playbook playbook-to-push.yml --user=jenkins'
             }
