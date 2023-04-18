@@ -5,4 +5,4 @@
   tasks:
 
       - name: push new image
-        command: sh docker push 1365890/devops_projects
+        command: sudo docker push 1365890/devops_projects

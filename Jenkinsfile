@@ -12,6 +12,11 @@ pipeline {
             }
         }
 
+        stage('Push the new Image to Dockerhub') {
+            steps {
+                sh 'ansible-playbook playbook-to-push.yml --user=jenkins'
+            }
+        }
 
         stage('Deploying new Service in Docker Swarm') {
             steps {
