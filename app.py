@@ -32,7 +32,7 @@ app=Flask(__name__)
 
 def QR():
 
-    put_html(r"""<h1  align="center"><strong> CODE GENERATOR:InsightIQ</strong></h1>""")  # App Name in Main screen
+    put_html(r"""<h1  align="center"><strong> CODE GENERATOR:test</strong></h1>""")  # App Name in Main screen
     # Drop-down selection
 
 
